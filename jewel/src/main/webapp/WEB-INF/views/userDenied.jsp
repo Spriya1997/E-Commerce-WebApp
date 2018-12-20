@@ -4,15 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+  <link rel="stylesheet" href="./resources/signup.css">
+
+<title>Add Supplier</title>
 </head>
 <body>
+<%@include file="header.jsp"  %>
 
-
-    <div class="bg"></div>
-
-    <p class="py-5 text-center">This example creates a full page background image. Try to resize the browser window to see how it always will cover the full screen (when scrolled to top), and that it scales nicely on all screen sizes.</p>
-
-
+<h1>User Denied...</h1>
+<%@include file="footer.jsp"  %>
 </body>
 </html>

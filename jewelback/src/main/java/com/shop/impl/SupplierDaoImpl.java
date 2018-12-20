@@ -1,6 +1,8 @@
 package com.shop.impl;
 
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,22 @@ public class SupplierDaoImpl implements SupplierDao {
 		session.getTransaction().commit();
 		session.close();
 		return true;
+	}
+	
+	@Override
+	@SuppressWarnings("unchecked")
+	public List<Supplier> supplierList() {
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		List<Supplier> list=session.createQuery("from SupplierTable").list();
+		session.getTransaction().commit();
+		session.close();
+		return list;
+	}
+	
+	@Override
+	public Supplier get(String id) {			
+		return sessionFactory.getCurrentSession().get(Supplier.class, id);
 	}
 
 }

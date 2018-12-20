@@ -14,7 +14,12 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.shop.model.Cart;
+import com.shop.model.Category;
+import com.shop.model.Order;
+import com.shop.model.Product;
 import com.shop.model.Supplier;
+import com.shop.model.User;
 
 @Configuration
 @ComponentScan({"com.shop.*"})
@@ -46,6 +51,11 @@ public class DatabaseConfiguration {
 	        LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource);
 	        builder.addProperties(getHibernateProperties());
 	        builder.addAnnotatedClass(Supplier.class);
+	        builder.addAnnotatedClass(Category.class);
+	        builder.addAnnotatedClass(Product.class);
+	        builder.addAnnotatedClass(User.class);
+	        builder.addAnnotatedClass(Cart.class);
+	        builder.addAnnotatedClass(Order.class);
 	        System.out.println("session object created");
 	        return builder.buildSessionFactory();
 	    }

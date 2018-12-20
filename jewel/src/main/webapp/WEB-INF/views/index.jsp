@@ -10,7 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="./resources/css/carose.css">
   <link rel="stylesheet" href="./resources/css/image.css">
-  <link rel="stylesheet" href="./resources/css/footer.css">
+  
 </head>
 <body>
 <%@include file="header.jsp" %>
@@ -75,13 +75,13 @@
 <h1 class="main-title">Gold</h1>
 
 <div class="container">
-  <h3 class="title">Text fadeIn bottom</h3>
+  <h3 class="title">Necklace</h3>
   <div class="content">
-    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+    <a href="./resources/images/1.jpg" target="_blank">
       <div class="content-overlay"></div>
       <img class="content-image" src="./resources/images/1.jpg" />
       <div class="content-details fadeIn-bottom">
-        <h3 class="content-title">This is a title</h3>
+        <h3 class="content-title">Click to view this picture</h3>
         <p class="content-text">This is a short description</p>
       </div>
     </a>
@@ -89,13 +89,13 @@
 </div>
 
 <div class="container">
-  <h3 class="title">Text fadeIn top</h3>
+  <h3 class="title">Bangles</h3>
   <div class="content">
-    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+    <a href="./resources/images/2.jpg" target="_blank">
       <div class="content-overlay"></div>
       <img class="content-image" src="./resources/images/2.jpg" />
       <div class="content-details fadeIn-top">
-        <h3>This is a title</h3>
+        <h3>Click to view this picture</h3>
         <p>This is a short description</p>
       </div>
     </a>
@@ -103,13 +103,13 @@
 </div>
 
 <div class="container">
-  <h3 class="title">Text fadeIn left</h3>
+  <h3 class="title">Earrings</h3>
   <div class="content">
-    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+    <a href="./resources/images/3.jpg" target="_blank">
       <div class="content-overlay"></div>
       <img class="content-image" src="./resources/images/3.jpg" />
       <div class="content-details fadeIn-left">
-        <h3>This is a title</h3>
+        <h3>Click to view this picture</h3>
         <p>This is a short description</p>
       </div>
     </a>
@@ -122,13 +122,13 @@
 <h1 class="main-title">Silver</h1>
 
 <div class="container">
-  <h3 class="title">Text fadeIn right</h3>
+  <h3 class="title">kunguma chimizh</h3>
   <div class="content">
-    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+    <a href="./resources/images/7.jpg" target="_blank">
       <div class="content-overlay"></div>
-       <img class="content-image" src="./resources/images/7.jpg" />">
+       <img class="content-image" src="./resources/images/7.jpg" />
       <div class="content-details fadeIn-right">
-        <h3>This is a title</h3>
+        <h3>Click to view this picture</h3>
         <p>This is a short description</p>
       </div>
     </a>
@@ -136,14 +136,13 @@
 </div>
 
 <div class="container">
-  <h3 class="title">Text fadeIn top left</h3>
+  <h3 class="title">Deepam Articles</h3>
   <div class="content">
-    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+    <a href="./resources/images/8.jpg" target="_blank">
       <div class="content-overlay"></div>
       <img class="content-image" src="./resources/images/8.jpg" />
-      <!--  <img class="content-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">-->
       <div class="content-details fadeIn-top fadeIn-left">
-        <h3>This is a title</h3>
+        <h3>Click to view this picture</h3>
         <p>This is a short description</p>
       </div>
     </a>
@@ -151,15 +150,15 @@
 </div>
 
 <div class="container">
-  <h3 class="title">Text fadeIn top right</h3>
+  <h3 class="title">Silver Lamps</h3>
   <div class="content">
-    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+    <a href="./resources/images/9.jpg" target="_blank">
       <div class="content-overlay"></div>
-       <img class="content-image" src="./resources/images/9.jpg" />">
+       <img class="content-image" src="./resources/images/9.jpg" />
       <div class="content-details fadeIn-right">
-        <h3>This is a title</h3>
+        <h3>Click to view this picture</h3>
         <p>This is a short description</p>
-      </div>
+      </div> 
     </a>
   </div>
 </div>

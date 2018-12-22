@@ -26,7 +26,6 @@
 						<tr><td><b>Name </b> ${user.userName}</td></tr>
 						<tr><td><b>Email </b>${user.email }</td></tr>
 						<tr><td><b>Mobile </b>${user.mobile }</td></tr>
-						<tr><td><b>Address </b>${user.address }</td></tr>
 						<tr><td><b>Total Amount </b>${cart.stream().map(cart -> cart.cartPrice * cart.quantity).sum()}</td></tr>
 					</table>
 					</div>

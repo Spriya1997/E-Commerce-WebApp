@@ -1,9 +1,6 @@
 package com.shop.controller;
 
-import java.security.Principal;
-import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,12 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.shop.dao.CartDao;
 import com.shop.dao.CategoryDao;
 import com.shop.dao.ProductDao;
 import com.shop.dao.SupplierDao;
 import com.shop.dao.UserDao;
-import com.shop.model.Cart;
 import com.shop.model.User;
 
 
@@ -40,22 +35,7 @@ public class IndexController {
 	
 	@Autowired
 	private SupplierDao supplierdao;
-	
-	@Autowired 
-	private CartDao cartdao;
-	
-	@RequestMapping("/buy")
-	public ModelAndView checkout(HttpServletRequest request)
-	{
-		ModelAndView mv = new ModelAndView("checkout");
-		Principal principal = request.getUserPrincipal();
-		String userEmail = principal.getName();
-		User user = userdao.get(userEmail);
-		List<Cart> cart = cartdao.getCartByUserId(user.getId());
-		mv.addObject("user", user);
-		mv.addObject("cart", cart);
-		return mv;
-	}
+		
 
 	@RequestMapping(value= {"/","home"},method=RequestMethod.GET)
 	public ModelAndView index()

@@ -31,8 +31,6 @@ body {
     				<address>
     				<strong>Billed To:</strong><br>
     					${user.userName}<br>
-    					${user.address}<br>
-    					${user.country}<br>
     					${user.mobile}
     				</address>
     			</div>

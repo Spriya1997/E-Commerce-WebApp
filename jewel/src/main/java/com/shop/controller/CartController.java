@@ -18,6 +18,7 @@ import com.shop.dao.OrderDao;
 import com.shop.dao.ProductDao;
 import com.shop.dao.UserDao;
 import com.shop.model.Cart;
+import com.shop.model.Order;
 import com.shop.model.Product;
 import com.shop.model.User;
 
@@ -103,7 +104,43 @@ public class CartController {
 		return mv;
 	}
 	
+	@RequestMapping("/buy")
+	public ModelAndView checkout(HttpServletRequest request)
+	{
+		ModelAndView mv = new ModelAndView("checkout");
+		Principal principal = request.getUserPrincipal();
+		String userEmail = principal.getName();
+		User user = userdao.get(userEmail);
+		List<Cart> cart = cartdao.getCartByUserId(user.getId());
+		mv.addObject("user", user);
+		mv.addObject("cart", cart);
+		return mv;
+	}
 	
+	@RequestMapping(value="/invoice",method=RequestMethod.POST)
+	public ModelAndView saveInvoice(HttpServletRequest request)
+	{
+		ModelAndView mv = new ModelAndView("invoice");
+		Order order = new Order();
+		Principal principal = request.getUserPrincipal();
+		String userEmail = principal.getName();
+		User user = userdao.get(userEmail);
+		Double total = Double.parseDouble(request.getParameter("total"));
+		String payment = request.getParameter("payment");
+		order.setPayment(payment);
+		order.setTotal(total);
+		order.setUser(user);
+		orderdao.insert(order);
+		mv.addObject("user",user);
+		mv.addObject("payment",payment);
+		mv.addObject("total", total);
+		return mv;
+	}
+
+	@RequestMapping(value="/thanks")
+	public String thanks() {
+		return "thanks";
+	}
 
 
 	
